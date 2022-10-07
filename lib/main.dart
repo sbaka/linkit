@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -42,13 +43,23 @@ class _MyHomePageState extends State<MyHomePage> {
     String dataStr = "";
     getData() async {
       final event = await ref.once(DatabaseEventType.value);
-      dataStr = event.snapshot.value.toString();
+      setState(() {
+        dataStr = event.snapshot.value.toString();
+      });
     }
 
     getData();
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+      ),
       body: Center(
-        child: Text(dataStr),
+        child: Container(
+          width: 100,
+          height: 100,
+          color: Colors.red,
+          child: Text(dataStr),
+        ),
       ),
     );
   }
