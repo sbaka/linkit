@@ -39,16 +39,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    DatabaseReference ref = FirebaseDatabase.instance.ref();
-    String dataStr = "";
-    getData() async {
-      final event = await ref.once(DatabaseEventType.value);
-      setState(() {
-        dataStr = event.snapshot.value.toString();
+    FirebaseDatabase database = FirebaseDatabase.instance;
+    DatabaseReference ref = database.ref();
+
+    setData() {
+      ref.child('/tests').set(<String, Object>{
+        "time": DateTime.now(),
+      }).then((onValue) {
+        print("passed");
+        return true;
+      }).catchError((onError) {
+        print("err");
+        return false;
       });
     }
 
-    getData();
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
@@ -58,9 +63,19 @@ class _MyHomePageState extends State<MyHomePage> {
           width: 100,
           height: 100,
           color: Colors.red,
-          child: Text(dataStr),
+          child: TextButton(
+            onPressed: setData,
+            child: const Text('press to add data'),
+          ),
         ),
       ),
     );
   }
 }
+  // String dataStr = "";
+    // getData() async {
+    //   final event = await ref.once(DatabaseEventType.value);
+    //   setState(() {
+    //     dataStr = event.snapshot.value.toString();
+    //   });
+    // }
