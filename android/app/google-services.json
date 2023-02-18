@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "714773629524",
+    "firebase_url": "https://linkit-c9614-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "linkit-c9614",
     "storage_bucket": "linkit-c9614.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "714773629524-bhfga31ebihvjmtm0bfnhbjdqrv205rl.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "714773629524-08tjgmej787ku4mu2bd7oacjbvvagljf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.linkit"
+              }
             }
           ]
         }

@@ -40,17 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     FirebaseDatabase database = FirebaseDatabase.instance;
-    DatabaseReference ref = database.ref();
+    DatabaseReference ref = database.ref("/tests");
 
-    setData() {
-      ref.child('/tests').set(<String, Object>{
-        "time": DateTime.now(),
-      }).then((onValue) {
-        print("passed");
-        return true;
-      }).catchError((onError) {
-        print("err");
-        return false;
+    setData() async {
+      print("clicked");
+      print(ref.key);
+      ref.set({
+        "time": "${DateTime.now()}",
+      }).then(
+        (_) {
+          print("cringe added");
+        },
+      ).onError((error, stackTrace) {
+        print(error);
       });
     }
 

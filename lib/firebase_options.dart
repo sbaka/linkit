@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '714773629524',
     projectId: 'linkit-c9614',
     authDomain: 'linkit-c9614.firebaseapp.com',
+    databaseURL: 'https://linkit-c9614-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'linkit-c9614.appspot.com',
     measurementId: 'G-E4BVEZXSDW',
   );
@@ -58,6 +59,7 @@ class DefaultFirebaseOptions {
     appId: '1:714773629524:android:978543872802593e6d3bc1',
     messagingSenderId: '714773629524',
     projectId: 'linkit-c9614',
+    databaseURL: 'https://linkit-c9614-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'linkit-c9614.appspot.com',
   );
 
@@ -66,6 +68,7 @@ class DefaultFirebaseOptions {
     appId: '1:714773629524:ios:1f6c710e70b36d386d3bc1',
     messagingSenderId: '714773629524',
     projectId: 'linkit-c9614',
+    databaseURL: 'https://linkit-c9614-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'linkit-c9614.appspot.com',
     iosClientId: '714773629524-08tjgmej787ku4mu2bd7oacjbvvagljf.apps.googleusercontent.com',
     iosBundleId: 'com.example.linkit',
@@ -76,6 +79,7 @@ class DefaultFirebaseOptions {
     appId: '1:714773629524:ios:1f6c710e70b36d386d3bc1',
     messagingSenderId: '714773629524',
     projectId: 'linkit-c9614',
+    databaseURL: 'https://linkit-c9614-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'linkit-c9614.appspot.com',
     iosClientId: '714773629524-08tjgmej787ku4mu2bd7oacjbvvagljf.apps.googleusercontent.com',
     iosBundleId: 'com.example.linkit',
